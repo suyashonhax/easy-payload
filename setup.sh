@@ -44,12 +44,19 @@ rm -rf bash.bashrc
 cd $HOME
 cd easy-payload
 cp bash.bashrc /data/data/com.termux/files/usr/etc
+echo -e "$blue Setting Up Ngrok For WAN support...."
+cd $HOME
+cd easy-payload
+cp ngrok $HOME
+cd $HOME
+chmod +x ngro
+echo -e "$cyan Pls enter Auth Token: "
+read -p 'Choice: ' ch0
+./ngrok authtoken $ch0
+clear
+cd $HOME
+cd easy-payload 
+rm -rf bash.bashrc ngrok
+clear
 echo -e "$green Setup done Now launch Easy-Payload by :--"
 echo -e "$cyan ./pl-easy"
-echo -e "$yellow Do you Want Username and password"
-read -p '[y/n]' ch2
-if [ $ch2 = 'y' ];
-then
-echo -e "$grey Username is subscriber"
-echo -e "$grey Password is me@sk"
-fi
