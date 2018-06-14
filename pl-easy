@@ -33,7 +33,7 @@ echo -e "$cyan Pls Select Network type"
 echo -e "$green 1-> WAN"
 echo -e "$green 2-> LAN"
 read -p 'Choice: ' lw
-if [ lw = '2' ];
+if [ $lw = '2' ];
 then
 echo -e "$cyan Pls Select Platform Of Payload"
 echo -e "$green 1-> Android"
@@ -93,7 +93,7 @@ echo -e "Payload name is $cyan skapp.apk"
 echo -e "$green Payload Saved In Sdcard"
 fi
 fi
-if [ lw = '1' ];
+if [ $lw = '1' ];
 then
 echo -e "$cyan Pls Select Platform Of Payload"
 echo -e "$green 1-> Android"
