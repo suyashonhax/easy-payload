@@ -25,7 +25,7 @@ echo -e "$grey         \/     \/ "
 echo -e "______________________________________"
 echo -e "$cyan Hello Freinds This is Suyash "
 echo -e "$yellow You Are Using My Script"
-chmod +x pl-easy
+chmod +x easypl
 if [ -d $HOME/metasploit-framework ]
 	then
 echo -e "$blue Setting Up Ngrok For WAN support...."
@@ -64,6 +64,30 @@ git clone https://github.com/Hax4us/Metasploit_termux |pv
 cd Metasploit_termux
 chmod +x metasploit.sh
 ./metasploit.sh
+echo -e "$blue Setting Up Ngrok For WAN support...."
+cd $HOME
+cd easy-payload
+cp ngrok $HOME
+cd $HOME
+chmod +x ngrok
+echo -e "$cyan Pls enter Auth Token: "
+read -p 'Choice: ' ch0
+./ngrok authtoken $ch0
+clear
+cd $HOME
+cd easy-payload 
+rm -rf bash.bashrc ngrok
+cd $HOME
+cd easy-payload
+cp easypl /data/data/com.termux/files/usr/bin
+cd $HOME
+cd easy-payload
+rm -rf easypl
+rm -rf README.md
+clear
+echo -e "$green Setup done Now launch Easy-Payload by :--"
+echo -e "$cyan easypl"
+echo -e "$blue From any terminal"
 else
 echo -e "$red Aborting Setup"
 echo -e "$blue Restart Setup After Some time"
