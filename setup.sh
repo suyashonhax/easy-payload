@@ -28,12 +28,6 @@ echo -e "$yellow You Are Using My Script"
 chmod +x pl-easy
 if [ -d $HOME/metasploit-framework ]
 	then
-clear
-cd /data/data/com.termux/files/usr/etc
-rm -rf bash.bashrc
-cd $HOME
-cd easy-payload
-cp bash.bashrc /data/data/com.termux/files/usr/etc
 echo -e "$blue Setting Up Ngrok For WAN support...."
 cd $HOME
 cd easy-payload
