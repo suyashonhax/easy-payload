@@ -64,6 +64,7 @@ git clone https://github.com/Hax4us/Metasploit_termux |pv
 cd Metasploit_termux
 chmod +x metasploit.sh
 ./metasploit.sh
+clear
 echo -e "$blue Setting Up Ngrok For WAN support...."
 cd $HOME
 cd easy-payload
