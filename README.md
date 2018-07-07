@@ -13,7 +13,6 @@ It creates Payload For
 • Linux(ubuntu)
 -
 # Steps For Installation 
--
 1• cd $HOME
 -
 2• git clone https://www.github.com/suyashonhax/easy-payload
@@ -27,7 +26,6 @@ It creates Payload For
 6• run easy-payload by 'easypl' command from any Terminal
 -
 # Credits
--
 1• Suyash Khandare (SuyashOnHax) : Creator Of Easy-payload.
 -
 2• Lokesh Bhai (Hax4Us) : Thnx For Giving Metasploit INSTALL script.
