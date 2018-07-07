@@ -1,7 +1,7 @@
 # Easy-Payload
 A easy Script to Make Payloads & Install Metasploit...
 -------------------------------------------------------------
-## Compablity
+# Compablity
 It creates Payload For
 -
 • AndroiD
