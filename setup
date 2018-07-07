@@ -28,15 +28,7 @@ echo -e "$yellow You Are Using My Script"
 chmod +x easypl
 if [ -d $HOME/metasploit-framework ]
 	then
-echo -e "$blue Setting Up Ngrok For WAN support...."
-cd $HOME
-cd easy-payload
-cp ngrok $HOME
-cd $HOME
-chmod +x ngrok
-echo -e "$cyan Pls enter Auth Token: "
-read -p 'Choice: ' ch0
-./ngrok authtoken $ch0
+
 clear
 cd $HOME
 cd easy-payload 
